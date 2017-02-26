@@ -7,5 +7,37 @@
                 <span class="icon-bar"></span>
             </button>
         </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                <li>Music</li>
+                <li>Register</li>
+                <li>Top5</li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                @if(User.Identity.IsAuthenticated)
+                {
+                    <p class="navbar-text">Bienvenido/a @User.Identity.Name</p>
+                    <li>
+                        <a href="@Url.Action("Logout", "Auth")">
+                            <span class="glyphicon glyphicon-log-out"></span>
+                            Logout
+                        </a>
+                    </li>
+                }
+                else
+                {
+                    <li>
+                        <button class="btn btn-default" value="Login" />
+                    </li>
+                    <li>
+                        @Html.TextBox("Username")
+                    </li>
+                    <li>
+                        @Html.Password("Password")
+                    </li>
+                }
+            </ul>
+        </div>
     </div>
 </div>
