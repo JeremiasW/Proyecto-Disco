@@ -1,0 +1,137 @@
+﻿/*Copyright*/
+footer
+{
+     display:flex;
+     justify-content: left;
+     align-items: center;
+     align-content: flex-start;
+     margin:0px;
+     padding:0px;
+}
+footer p
+{
+     font-family:disco_7;
+     margin-left:40px;
+     transition:all 2s;
+     font-size:80%;
+}
+footer p:before {
+  content:"\00a9";
+}
+/*Social Media elements*/
+#social {
+  display: inline-block;
+  position:absolute;
+  top:50%;
+  right:-70px;
+ -ms-transform:translate(-50%,-50%);
+  -webkit-transform:translate(-50%,-50%);
+  transform:translate(-50%,-50%);
+}
+
+/* Icons */
+
+#social a {
+  color:#fff;
+  background: #DB6E82;
+  border-radius:4px;
+  text-align:center;
+  text-decoration:none;
+  font-family:fontawesome;
+  position: relative;
+  display: inline-block;
+  width:40px;
+  height:28px;
+  padding-top:12px;
+  margin:0 2px;
+  -o-transition:all 2s;
+  -webkit-transition: all 2s;
+  -moz-transition: all 2s;
+  transition: all 2s;
+   -webkit-font-smoothing: antialiased;
+}
+
+#social a:hover {
+  background: #ef92a3;
+}
+
+/* pop-up text */
+
+#social a span {
+  color:#666;
+  position:absolute;
+  font-family:sans-serif;
+  bottom:0;
+  left:-25px;
+  right:-25px;
+  padding:5px 7px;
+  z-index:-1;
+  font-size:14px;
+  border-radius:2px;
+  background:#fff;
+  visibility:hidden;
+  opacity:0;
+  -o-transition:all .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -webkit-transition: all .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -moz-transition: all .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* pop-up text arrow */
+
+#social a span:before {
+  content:'';
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #fff;
+  position:absolute;
+  bottom:-5px;
+  left:40px;
+}
+
+/* text pops up when icon is in hover state */
+
+#social a:hover span {
+  bottom:50px;
+  visibility:visible;
+  opacity:1;
+}
+
+/* font awesome icons */
+
+#social a:nth-of-type(1):before {
+content:'\f09a';
+}
+#social a:nth-of-type(2):before {
+content:'\f099';
+}
+#social a:nth-of-type(3):before {
+content:'\f0d5';
+}
+#social a:nth-of-type(4):before {
+content:'\f113';
+}
+@media only screen and (max-width: 700px) {
+     footer
+     {
+          height:80px;
+          flex-direction:column;
+          justify-content: flex-end;
+     }
+     footer p
+     {
+          font-size: 90%;
+          margin-left: 25px;
+     }
+     #social
+     {
+          left:calc(50% - 84px);
+          right:auto;
+          top:5px;
+          -ms-transform:translate(0%,0%);
+          -webkit-transform:translate(0%,0%);
+          transform:translate(0%,0%);
+     }
+}

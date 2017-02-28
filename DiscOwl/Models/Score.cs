@@ -11,16 +11,16 @@ namespace DiscOwl.Models
     {
         [Key]
         public int Id { get; set; }
+        [Column("IdCliente")]
         public int CustomerId { get; set; }
+        [Column("IdDisco")]
         public int DiscId { get; set; }
-
         [Column("Puntuacion")]
         public int ScoreValue { get; set; }
 
-        [ForeignKey("IdCliente")]
+        [ForeignKey("DiscId")]
         public virtual Disc Disc { get; set; }
-
-        [ForeignKey("IdCliente")]
+        [ForeignKey("CustomerId")]
         public virtual Customer Customer { get; set; }
     }
 }

@@ -10,8 +10,8 @@ namespace DiscOwl.Models
     public class Type
     {
         [Key]
+        [Column("IdTipo")]
         public int Id { get; set; }
-
         [Column("Tipo")]
         public String TypeName { get; set; }
     }

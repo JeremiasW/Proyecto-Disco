@@ -1,0 +1,70 @@
+﻿@model DiscOwl.ViewModel.BaseViewModel
+
+@{ 
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="~/CSS/estructura.css" media="screen" />
+        <link rel="stylesheet" type="text/css" href="~/CSS/soundBars.css" media="screen" />
+        <link rel="stylesheet" type="text/css" href="~/CSS/nav.css" media="screen" />
+        <link rel="stylesheet" type="text/css" href="~/CSS/footer.css" media="screen" />
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <script src="~/JS/js.js"></script>
+        <title>@Model.ViewTitle</title>
+    </head>
+    <body>
+        <div id="container">
+            <header>
+                <div id="bars">
+                </div>
+            </header>
+            <nav class="cambiaColorBorde">
+                <div id="modalMenu">
+                    <i id="flecha" class="fa fa-angle-double-down"></i>
+                    &nbsp;Menu
+                </div>
+                <ul id="navMenu">
+                    <li class="selected"><a href="@Url.Action("Index", "Home")">Home</a></li>
+                    <li><a href="@Url.Action("Index", "Music")">Music</a></li>
+                    <li><a href="@Url.Action("Index", "Auth")">Register</a></li>
+                    <li><a href="">Top5</a></li>
+                </ul>
+                <input id="modalLogin" class="cambiaColor" type="button" value="Account">
+                <div id="login">
+                    @if(User.Identity.IsAuthenticated)
+                    {
+                        <span>Bienvenido/a @Model.Username</span>
+                        <span>Cerrar sesión</span>
+                    }
+                    else
+                    {
+                        <input size="8" placeholder="Username" type="text">
+                        <input size="8" placeholder="Password" type="password">
+                        <input class="cambiaColor" type="button" value="Login">
+                    }
+                </div>
+            </nav>
+            <section>@RenderBody()</section>
+            <footer>
+                <div>
+                    <p>
+                        2017 2DAWA ProjectDEW
+                    </p>
+                </div>
+                <div id="social">
+                    <a class="cambiaColor" href="#"><span>Facebook</span></a>
+                    <a class="cambiaColor" href="#"><span>Twitter</span></a>
+                    <a class="cambiaColor" href="#"><span>Google+</span></a>
+                    <a class="cambiaColor" href="#"><span>Github</span></a>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>

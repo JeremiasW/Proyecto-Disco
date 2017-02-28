@@ -158,8 +158,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="BusinessAccessLayer\" />
-    <Folder Include="ViewModel\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
@@ -194,9 +192,20 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
+    <Compile Include="BusinessAccessLayer\DiscBusiness.cs" />
+    <Compile Include="Controllers\AuthController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MusicApiController.cs" />
+    <Compile Include="Controllers\MusicController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="DataAccessLayer\DALDisc.cs" />
+    <Compile Include="DataAccessLayer\DiscData.cs" />
+    <Compile Include="DTO\CustomerDTO.cs" />
+    <Compile Include="DTO\DiscDTO.cs" />
+    <Compile Include="DTO\DiscTypeDTO.cs" />
+    <Compile Include="DTO\PerformerDTO.cs" />
+    <Compile Include="DTO\ScoreDTO.cs" />
+    <Compile Include="DTO\TypeDTO.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -207,14 +216,28 @@
     <Compile Include="Models\Score.cs" />
     <Compile Include="Models\Type.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModel\BaseViewModel.cs" />
+    <Compile Include="ViewModel\DiscViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\HelpPage\HelpPage.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\images\background1.jpg" />
+    <Content Include="Content\images\background2.jpg" />
+    <Content Include="Content\images\background3.jpg" />
+    <Content Include="CSS\estructura.css" />
+    <Content Include="CSS\footer.css" />
+    <Content Include="CSS\nav.css" />
+    <Content Include="CSS\soundBars.css" />
+    <Content Include="CSS\toastr.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="JS\js.js" />
+    <Content Include="JS\music.js" />
+    <Content Include="JS\registro.js" />
+    <Content Include="JS\toastr.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Areas\HelpPage\Views\Web.config" />
@@ -239,6 +262,7 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Content\fonts\disco_7.ttf" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -258,9 +282,9 @@
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Shared\Error.cshtml" />
-    <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Shared\Header.cshtml" />
+    <Content Include="Views\Music\GetMusic.cshtml" />
+    <Content Include="Views\Auth\Register.cshtml" />
+    <Content Include="Views\Shared\LayoutBase.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

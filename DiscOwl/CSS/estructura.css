@@ -1,0 +1,95 @@
+﻿html
+{
+
+}
+body,html,#container
+{
+     position:relative;
+     box-sizing: border-box;
+     width:100%;
+     min-width:250px;
+     margin:0px;
+     padding:0px;
+     display:flex;
+     justify-content: center;
+     align-items: center;
+     align-content: center;
+     flex-direction:column;
+}
+header
+{
+     position:relative;
+     width:100%;
+     min-height:100px;
+     height:100px;
+     min-width:250px;
+     background-color: rgba(0, 0, 0, 0.6);
+     z-index:1;
+}
+nav
+{
+     position:relative;
+     width:100%;
+     min-height:50px;
+     height:50px;
+     min-width:250px;
+     background-color: rgba(0, 0, 0, 0.5);
+     z-index:1;
+}
+section
+{
+     position:relative;
+     width:80%;
+     min-width:250px;
+     background-color: rgba(0, 0, 0, 0.4);
+     transition:width 1s;
+     z-index:0;
+}
+footer
+{
+     position:relative;
+     width:80%;
+     height:60px;
+     min-width:250px;
+     background-color: rgba(0, 0, 0, 0.6);
+     transition:width 1s;
+}
+.fix
+{
+     position:fixed;
+     top:0px;
+}
+html::-webkit-scrollbar-track
+{
+   width:0px;
+   background:none;
+   border-radius:0px 10px 10px 0px;
+}
+
+html::-webkit-scrollbar
+{
+   width:8px;
+   background:#444;
+   border-radius:0px 10px 10px 0px;
+}
+
+html::-webkit-scrollbar-thumb
+{
+   border-radius:10px;
+   background-color:white;
+
+}
+@media only screen and (max-width: 700px) {
+     *
+     {
+          font-size:100%;
+     }
+     section
+     {
+          width:100%;
+     }
+     footer
+     {
+          width:100%;
+     }
+}

@@ -1,0 +1,229 @@
+﻿/*Import para los iconos de social Media*/
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
+@font-face
+{
+    font-family:disco_7;
+    src:url(../Images/fuentes/disco_7.TTF);
+}
+.cambiaColor
+{
+     -webkit-transition: background-color 2s;
+     transition: background-color 2s;
+}
+/*HTML*/
+*
+{
+     font-size:15px;
+}
+html
+{
+     background-image:url("../Images/background3.jpg");
+     background-repeat:no-repeat;
+     background-attachment: fixed;
+     background-position: center center;
+     background-size:cover;
+     font-size:15px;
+}
+/* NAV */
+nav
+{
+     display:flex;
+     justify-content: space-between;
+     align-items: center;
+     box-sizing: border-box;
+     border-bottom:3px red solid;
+     transition: border-color 2s;
+}
+#navMenu
+{
+     list-style: none;
+     Display:flex;
+     flex-direction: row;
+     justify-content: center;
+     align-items: center;
+     align-content: center;
+     width:400px;
+     height:100%;
+     margin:0px;
+     padding:0px;
+}
+#navMenu li
+{
+     flex-grow: 1;
+     height:100%;
+}
+.selected
+{
+     background-color: rgba(0, 0, 0, 0.8);
+     text-decoration: underline;
+
+}
+#navMenu li a
+{
+     text-decoration: none;
+     height:100%;
+     width: 100%;
+     color:white;
+     Display:flex;
+     justify-content: center;
+     align-items: center;
+     align-content: center;
+     font-family:disco_7;
+     border:0px red solid;
+     transition:border-color 2s,color 2s,border-width 0.3s;
+     box-sizing: border-box;
+}
+#navMenu li a:hover
+{
+     border-bottom:5px red solid;
+     transition:border-color 2s,color 2s,border-width 0.3s;
+     box-shadow: inset 0px 0px 20px #444;
+}
+
+#login
+{
+     display:flex;
+     flex-direction:row;
+     justify-content: center;
+     align-items: center;
+     align-content: center;
+}
+#login input
+{
+     margin:3px;
+}
+#login input[type="text"],nav input[type="password"]
+{
+     color:white;
+     background-color:rgba(0, 0, 0, 0.5);
+     border:2px #444 inset;
+     padding:5px;
+     border-radius:5px;
+     text-align: center;
+}
+#login input[type="button"], #modalLogin
+{
+     font-family: disco_7;
+     font-size:105%;
+     color:white;
+     padding:5px;
+     border-radius:5px;
+     border:2px #444 outset;
+     text-align: center;
+}
+#login input[type="button"]:hover, #modalLogin:hover
+{
+     border:2px lightgray inset;
+     opacity:0.7;
+}
+#modalMenu
+{
+     font-family: disco_7;
+     display:flex;
+     justify-content: center;
+     align-items: center;
+     align-content: center;
+     width:140px;
+     height:100%;
+     background-color:rgba(0, 0, 0, 0.3);
+     transition:color 2s, border-color 2s !important;
+     font-size: 120%;
+}
+
+
+/*Lo siguiente es un copipaste para un hover que me molaba*/
+#modalMenu {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+#modalMenu:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: black;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 0 50%;
+  transform-origin: 0 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+#modalMenu:hover, #modalMenu:focus, #modalMenu:active {
+  color: white;
+}
+#modalMenu:hover:before, #modalMenu:focus:before, #modalMenu:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+  -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+  transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+}
+#modalLogin
+{
+     padding:7px;
+     margin-right:5px;
+}
+#modalLogin, #modalMenu
+{
+     display:none;
+}
+/*Hasta aqui copipaste anterior*/
+
+@media only screen and (max-width: 700px) {
+     #login
+     {
+          background-color:rgba(0, 0, 0, 0.6);
+          flex-direction:column;
+          border-radius:5px;
+          position:absolute;
+          top:50px;
+          right:0px;
+          width:140px;
+          height:140px;
+     }
+     #navMenu
+     {
+          background-color:rgba(0, 0, 0, 0.6);
+          flex-direction:column;
+          border-radius:5px;
+          position:absolute;
+          top:50px;
+          left:0px;
+          width:140px;
+          height:200px;
+     }
+     #navMenu li
+     {
+          flex-grow: 1;
+          width:100%;
+          height:50px !important;
+     }
+     #navMenu li a:hover
+     {
+          border-bottom:0px red solid;
+          border-left:0px red solid;
+          border-right:5px red solid;
+          background-color:rgba(0, 0, 0, 0.5);
+          box-shadow: inset 0px 0px 20px #444;
+          transition:border-color 2s,color 2s,border-width 0.3s;
+     }
+     #modalLogin, #modalMenu
+     {
+          display:flex !important;
+     }
+}

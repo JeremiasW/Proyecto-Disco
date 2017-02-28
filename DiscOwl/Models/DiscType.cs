@@ -11,10 +11,12 @@ namespace DiscOwl.Models
     {
         [Key]
         public int Id { get; set; }
+        [Column("IdDisco")]
         public int DiscId { get; set; }
+        [Column("IdTipo")]
         public int TypeId { get; set; }
 
-        [ForeignKey("IdTipo")]
-        public virtual Type TypeElement { get; set; }
+        [ForeignKey("TypeId")]
+        public virtual Models.Type TypeElement { get; set; }
     }
 }

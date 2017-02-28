@@ -12,16 +12,22 @@ namespace DiscOwl.Models
         public Disc()
         {
             this.DiscTypeSet = new HashSet<DiscType>();
+            this.ScoreSet = new HashSet<Score>();
         }
 
         [Key]
+        [Column("IdDisco")]
         public int DiscId { get; set; }
+        [Column("Titulo")]
         public String Title { get; set; }
-        public Nullable<System.Int32> Year { get; set; }
+        [Column("Agno")]
+        public Nullable<System.Double> Year { get; set; }
+        [Column("IdInterprete")]
         public int PerformerId { get; set; }
 
-        [ForeignKey("IdInterprete")]
+        [ForeignKey("PerformerId")]
         public virtual Performer Performer { get; set; }
         public virtual ICollection<DiscType> DiscTypeSet { get; set; }
+        public virtual ICollection<Score> ScoreSet { get; set; }
     }
 }

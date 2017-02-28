@@ -1,0 +1,25 @@
+﻿@{ 
+    Layout = "~/Views/Shared/LayoutBase.cshtml";
+}
+
+<div>
+    <p>
+        <input type="text" id="name" value="Busca por nombre" />
+        <input type="button" id="searchByName" value="Buscar" />
+    </p>
+
+    <table>
+        <thead>
+            <tr>
+                <td><strong>Título</strong></td>
+                <td><strong>Autor</strong></td>
+                <td><strong>Tipo</strong></td>
+                <td><strong>Puntuación</strong></td>
+            </tr>
+        </thead>
+        <tbody id="elements">
+
+        </tbody>
+    </table>
+</div>
+<script src="~/JS/music.js"></script>

@@ -7,12 +7,17 @@ using System.Web.Mvc;
 
 namespace DiscOwl.Controllers
 {
-    public class HomeController : Controller
+    public class MusicController : Controller
     {
         public ActionResult Index()
         {
+            return RedirectToAction("GetMusic");
+        }
+
+        public ActionResult GetMusic()
+        {
             BaseViewModel vm = new BaseViewModel();
-            vm.ViewTitle = "Home";
+            vm.ViewTitle = "Music";
 
             return View(vm);
         }
